@@ -1,44 +1,45 @@
-/* Estilos generales */
+/* estilos generales */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #e8e1d1; /* Fondo sólido suave */
+    font-family: 'Arial', sans-serif; /* Fuente general */
+    background-color: #e8e1d1; /* Color de fondo suave */
     color: #333; /* Color de texto general */
     margin: 0;
     padding: 0;
-    line-height: 1.6; /* Mejorar la legibilidad */
+    line-height: 1.6; /* Mejora la legibilidad del texto */
     transition: background-color 0.3s ease; /* Transición suave al cambiar el fondo */
 }
 
 h1, h2, h3, h4 {
     color: #5D4037; /* Color de los títulos */
-    transition: color 0.3s ease; /* Transición suave para los títulos */
+    transition: color 0.3s ease; /* Transición de color para los títulos */
     margin: 10px 0; /* Espaciado vertical para los títulos */
 }
 
 h1 {
-    font-size: 2.5em; /* Tamaño más grande para el título principal */
+    font-size: 2.5em; /* Tamaño de fuente del título principal */
 }
 
 h2 {
-    font-size: 2em; /* Tamaño del segundo nivel */
+    font-size: 2em; /* Tamaño de fuente para el segundo nivel de títulos */
 }
 
 h3 {
-    font-size: 1.75em; /* Tamaño del tercer nivel */
+    font-size: 1.75em; /* Tamaño de fuente para el tercer nivel de títulos */
 }
 
 h4 {
-    font-size: 1.5em; /* Tamaño del cuarto nivel */
+    font-size: 1.5em; /* Tamaño de fuente para el cuarto nivel de títulos */
 }
 
+/* Enlaces */
 a {
-    text-decoration: none; /* Sin subrayado en enlaces */
+    text-decoration: none; /* Quita el subrayado en enlaces */
     color: #5D4037; /* Color de los enlaces */
-    transition: color 0.3s ease; /* Transición suave para enlaces */
+    transition: color 0.3s ease; /* Transición suave para los enlaces */
 }
 
 a:hover {
-    color: #3e272b; /* Color de enlaces al pasar el ratón */
+    color: #3e272b; /* Color de los enlaces al pasar el ratón */
 }
 
 /* Estilos del encabezado */
@@ -47,28 +48,28 @@ header {
     color: white; /* Color de texto del encabezado */
     padding: 20px;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para el encabezado */
 }
 
-/* Estilos para el contenido de la receta */
+/* Contenedor principal de la receta */
 .recipe {
-    display: flex; /* Usar flexbox para centrar el contenido */
+    display: flex; /* Flexbox para alinear el contenido */
     flex-direction: column; /* Disposición vertical */
-    align-items: center; /* Centrar horizontalmente */
+    align-items: center; /* Alinear el contenido al centro horizontalmente */
     text-align: center; /* Centrar el texto */
-    margin: 20px; /* Margen alrededor del contenido */
+    margin: 20px; /* Margen alrededor del contenedor de la receta */
 }
 
 .recipe img {
-    max-width: 100%; /* Asegurar que la imagen no exceda el ancho del contenedor */
-    height: auto; /* Mantener proporción */
+    max-width: 100%; /* Evita que la imagen sobrepase el contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
     border-radius: 8px; /* Bordes redondeados para la imagen */
 }
 
-/* Estilos para el footer */
+/* Estilos para el pie de página (footer) */
 footer {
-    background-color: #8e735b; /* Color de fondo del footer */
-    color: white; /* Color de texto del footer */
+    background-color: #8e735b; /* Fondo del footer */
+    color: white; /* Color de texto en el footer */
     text-align: center;
     padding: 10px;
     position: relative;
@@ -78,27 +79,27 @@ footer {
 
 /* Navegación */
 nav ul {
-    list-style-type: none; /* Sin viñetas */
+    list-style-type: none; /* Quita las viñetas en la lista */
     padding: 0;
 }
 
 nav ul li {
-    display: inline; /* En línea */
-    margin: 0 15px; /* Espaciado entre elementos */
+    display: inline; /* Coloca los elementos de la lista en línea */
+    margin: 0 15px; /* Espaciado entre los elementos */
 }
 
 nav ul li a {
-    color: white; /* Color de enlaces en el encabezado */
-    position: relative; /* Para el efecto de subrayado */
+    color: white; /* Color de los enlaces en el encabezado */
+    position: relative; /* Posicionamiento para efecto de subrayado */
 }
 
 nav ul li a::after {
-    content: '';
+    content: ''; /* Crea una línea para el subrayado */
     display: block;
     height: 2px;
     width: 0;
     background: white; /* Color del subrayado */
-    transition: width 0.3s; /* Animación del subrayado */
+    transition: width 0.3s; /* Animación para expandir el subrayado */
 }
 
 nav ul li a:hover::after {
@@ -108,57 +109,57 @@ nav ul li a:hover::after {
 /* Estilos de las tarjetas de recetas */
 .recetas-lista {
     display: flex;
-    flex-wrap: wrap; /* Permitir envoltura */
-    justify-content: center; /* Centrar tarjetas */
-    gap: 20px; /* Espaciado entre tarjetas */
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en varias filas */
+    justify-content: center; /* Centra las tarjetas en el contenedor */
+    gap: 20px; /* Espaciado entre las tarjetas */
     padding: 20px;
 }
 
 .recipe-card {
-    background-color: #fff; /* Fondo blanco para tarjetas */
+    background-color: #fff; /* Fondo blanco para las tarjetas */
     border: 1px solid #ccc; /* Borde ligero */
-    border-radius: 8px; /* Esquinas redondeadas */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra */
-    overflow: hidden; /* Recortar contenido que desborda */
-    width: 200px; /* Ancho fijo */
-    text-align: center; /* Centrar texto */
-    transition: transform 0.3s, box-shadow 0.3s; /* Transición suave para escala y sombra */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para la tarjeta */
+    overflow: hidden; /* Recorta contenido que se desborde */
+    width: 200px; /* Ancho fijo para cada tarjeta */
+    text-align: center; /* Centra el texto */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones para sombra y escala */
 }
 
 .recipe-card:hover {
-    transform: translateY(-5px); /* Elevar la tarjeta al pasar el ratón */
+    transform: translateY(-5px); /* Eleva la tarjeta al pasar el ratón */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra más profunda */
 }
 
 .recipe-card img {
-    width: 100%; /* Imágenes al 100% del ancho de la tarjeta */
-    height: auto; /* Mantener la proporción */
+    width: 100%; /* Imagen al 100% del ancho de la tarjeta */
+    height: auto; /* Mantiene la proporción */
 }
 
 .recipe-card h3 {
-    margin: 10px 0; /* Espaciado superior e inferior */
-    font-size: 1.25em; /* Tamaño de fuente ajustado para el título de la receta */
+    margin: 10px 0; /* Margen superior e inferior */
+    font-size: 1.25em; /* Tamaño del título de la receta */
 }
 
 .recipe-card p {
-    padding: 0 10px; /* Espaciado lateral */
-    font-size: 0.9em; /* Tamaño de fuente reducido para la descripción */
+    padding: 0 10px; /* Espaciado lateral para el texto de la tarjeta */
+    font-size: 0.9em; /* Tamaño reducido para la descripción */
 }
 
 /* Botones */
 .btn {
-    display: inline-block; /* Mostrar como bloque en línea */
-    background-color: #5D4037; /* Color de fondo del botón */
+    display: inline-block; /* Botón en bloque en línea */
+    background-color: #5D4037; /* Fondo del botón */
     color: white; /* Color de texto del botón */
     padding: 10px 20px; /* Espaciado dentro del botón */
-    border-radius: 5px; /* Esquinas redondeadas */
+    border-radius: 5px; /* Bordes redondeados */
     margin: 10px 0; /* Espaciado superior e inferior */
-    transition: background-color 0.3s, transform 0.2s; /* Transición para fondo y escalado */
+    transition: background-color 0.3s, transform 0.2s; /* Transiciones para fondo y escala */
 }
 
 .btn:hover {
-    background-color: #3e272b; /* Color al pasar el ratón */
-    transform: scale(1.05); /* Aumentar tamaño al pasar el ratón */
+    background-color: #3e272b; /* Color del botón al pasar el ratón */
+    transform: scale(1.05); /* Escala del botón al pasar el ratón */
 }
 
 /* Secciones de artículos y maridajes */
@@ -166,9 +167,9 @@ section {
     padding: 20px;
     margin: 20px 0; /* Margen vertical entre secciones */
     background-color: #fff; /* Fondo blanco */
-    border-radius: 8px; /* Esquinas redondeadas */
+    border-radius: 8px; /* Bordes redondeados */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra */
-    transition: box-shadow 0.3s; /* Transición para la sombra */
+    transition: box-shadow 0.3s; /* Transición de sombra */
 }
 
 section:hover {
@@ -178,22 +179,50 @@ section:hover {
 /* Estilo de imágenes en artículos */
 .imagenes {
     display: flex;
-    justify-content: space-around; /* Espacia las imágenes de manera uniforme */
-    flex-wrap: wrap; /* Permite que las imágenes se envuelvan en varias filas */
+    justify-content: space-around; /* Espaciado uniforme entre imágenes */
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten en varias filas */
 }
 
 .imagenes figure {
-    width: 30%; /* Ajusta el tamaño de cada imagen a un 30% del contenedor */
-    margin: 10px; /* Espaciado entre las figuras */
+    width: 30%; /* Tamaño de cada imagen al 30% del contenedor */
+    margin: 10px; /* Margen entre figuras */
     transition: transform 0.3s; /* Transición para la escala */
 }
 
 .imagenes figure:hover {
-    transform: scale(1.05); /* Aumentar tamaño al pasar el ratón */
+    transform: scale(1.05); /* Aumenta el tamaño de la imagen al pasar el ratón */
 }
 
 .imagenes img {
-    width: 100%; /* Las imágenes ocuparán el 100% del ancho del figure */
-    height: auto; /* Mantiene la proporción de la imagen */
-    border-radius: 8px; /* Opcional: añade bordes redondeados */
+    width: 100%; /* Imagen ocupa el 100% del ancho del figure */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 8px; /* Bordes redondeados opcionales */
+}
+
+/* Estilo para la sección del autor */
+#autor {
+    text-align: center;
+    margin-top: 2em; /* Margen superior para separar la sección */
+    padding: 1em; /* Espaciado dentro de la sección */
+    background-color: #f9f9f9; /* Fondo claro */
+    border-top: 1px solid #ddd; /* Borde superior para separación */
+}
+
+.autor-info {
+    display: flex;
+    align-items: center; /* Centrar contenido verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    gap: 1em; /* Espacio entre elementos */
+}
+
+.autor-foto {
+    width: 110px; /* Tamaño de la foto del autor */
+    height: 100px;
+    border-radius: 100%; /* Foto en forma de círculo */
+    object-fit: cover; /* Ajuste de imagen para que no se distorsione */
+}
+
+.autor-descripcion {
+    max-width: 600px; /* Ancho máximo para el texto */
+    text-align: left; /* Alineación del texto a la izquierda */
 }
