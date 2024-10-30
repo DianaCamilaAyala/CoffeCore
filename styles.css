@@ -1,0 +1,199 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e8e1d1; /* Fondo sólido suave */
+    color: #333; /* Color de texto general */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Mejorar la legibilidad */
+    transition: background-color 0.3s ease; /* Transición suave al cambiar el fondo */
+}
+
+h1, h2, h3, h4 {
+    color: #5D4037; /* Color de los títulos */
+    transition: color 0.3s ease; /* Transición suave para los títulos */
+    margin: 10px 0; /* Espaciado vertical para los títulos */
+}
+
+h1 {
+    font-size: 2.5em; /* Tamaño más grande para el título principal */
+}
+
+h2 {
+    font-size: 2em; /* Tamaño del segundo nivel */
+}
+
+h3 {
+    font-size: 1.75em; /* Tamaño del tercer nivel */
+}
+
+h4 {
+    font-size: 1.5em; /* Tamaño del cuarto nivel */
+}
+
+a {
+    text-decoration: none; /* Sin subrayado en enlaces */
+    color: #5D4037; /* Color de los enlaces */
+    transition: color 0.3s ease; /* Transición suave para enlaces */
+}
+
+a:hover {
+    color: #3e272b; /* Color de enlaces al pasar el ratón */
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #8e735b; /* Color de fondo del encabezado */
+    color: white; /* Color de texto del encabezado */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilos para el contenido de la receta */
+.recipe {
+    display: flex; /* Usar flexbox para centrar el contenido */
+    flex-direction: column; /* Disposición vertical */
+    align-items: center; /* Centrar horizontalmente */
+    text-align: center; /* Centrar el texto */
+    margin: 20px; /* Margen alrededor del contenido */
+}
+
+.recipe img {
+    max-width: 100%; /* Asegurar que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Mantener proporción */
+    border-radius: 8px; /* Bordes redondeados para la imagen */
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #8e735b; /* Color de fondo del footer */
+    color: white; /* Color de texto del footer */
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Navegación */
+nav ul {
+    list-style-type: none; /* Sin viñetas */
+    padding: 0;
+}
+
+nav ul li {
+    display: inline; /* En línea */
+    margin: 0 15px; /* Espaciado entre elementos */
+}
+
+nav ul li a {
+    color: white; /* Color de enlaces en el encabezado */
+    position: relative; /* Para el efecto de subrayado */
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: white; /* Color del subrayado */
+    transition: width 0.3s; /* Animación del subrayado */
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Expande el subrayado al pasar el ratón */
+}
+
+/* Estilos de las tarjetas de recetas */
+.recetas-lista {
+    display: flex;
+    flex-wrap: wrap; /* Permitir envoltura */
+    justify-content: center; /* Centrar tarjetas */
+    gap: 20px; /* Espaciado entre tarjetas */
+    padding: 20px;
+}
+
+.recipe-card {
+    background-color: #fff; /* Fondo blanco para tarjetas */
+    border: 1px solid #ccc; /* Borde ligero */
+    border-radius: 8px; /* Esquinas redondeadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    overflow: hidden; /* Recortar contenido que desborda */
+    width: 200px; /* Ancho fijo */
+    text-align: center; /* Centrar texto */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transición suave para escala y sombra */
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px); /* Elevar la tarjeta al pasar el ratón */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra más profunda */
+}
+
+.recipe-card img {
+    width: 100%; /* Imágenes al 100% del ancho de la tarjeta */
+    height: auto; /* Mantener la proporción */
+}
+
+.recipe-card h3 {
+    margin: 10px 0; /* Espaciado superior e inferior */
+    font-size: 1.25em; /* Tamaño de fuente ajustado para el título de la receta */
+}
+
+.recipe-card p {
+    padding: 0 10px; /* Espaciado lateral */
+    font-size: 0.9em; /* Tamaño de fuente reducido para la descripción */
+}
+
+/* Botones */
+.btn {
+    display: inline-block; /* Mostrar como bloque en línea */
+    background-color: #5D4037; /* Color de fondo del botón */
+    color: white; /* Color de texto del botón */
+    padding: 10px 20px; /* Espaciado dentro del botón */
+    border-radius: 5px; /* Esquinas redondeadas */
+    margin: 10px 0; /* Espaciado superior e inferior */
+    transition: background-color 0.3s, transform 0.2s; /* Transición para fondo y escalado */
+}
+
+.btn:hover {
+    background-color: #3e272b; /* Color al pasar el ratón */
+    transform: scale(1.05); /* Aumentar tamaño al pasar el ratón */
+}
+
+/* Secciones de artículos y maridajes */
+section {
+    padding: 20px;
+    margin: 20px 0; /* Margen vertical entre secciones */
+    background-color: #fff; /* Fondo blanco */
+    border-radius: 8px; /* Esquinas redondeadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: box-shadow 0.3s; /* Transición para la sombra */
+}
+
+section:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra más profunda al pasar el ratón */
+}
+
+/* Estilo de imágenes en artículos */
+.imagenes {
+    display: flex;
+    justify-content: space-around; /* Espacia las imágenes de manera uniforme */
+    flex-wrap: wrap; /* Permite que las imágenes se envuelvan en varias filas */
+}
+
+.imagenes figure {
+    width: 30%; /* Ajusta el tamaño de cada imagen a un 30% del contenedor */
+    margin: 10px; /* Espaciado entre las figuras */
+    transition: transform 0.3s; /* Transición para la escala */
+}
+
+.imagenes figure:hover {
+    transform: scale(1.05); /* Aumentar tamaño al pasar el ratón */
+}
+
+.imagenes img {
+    width: 100%; /* Las imágenes ocuparán el 100% del ancho del figure */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 8px; /* Opcional: añade bordes redondeados */
+}
